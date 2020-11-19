@@ -322,15 +322,7 @@ void Player::Update(DWORD dt, vector<LPGAMEENTITY>* coObjects)
 				if (ny != 0) vy = 0;
 				if (e->ny != 0)
 				{
-					if (e->ny == -1)
-					{
-						isGround = true;
-						isJumping = false;
-						//isFly = false;
-						//vy = 0;
-					}
-					/*else
-						y += dy;*/
+					
 
 				}
 			}

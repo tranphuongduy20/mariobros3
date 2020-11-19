@@ -102,15 +102,18 @@ void Koopa::Update(DWORD dt, vector<LPGAMEENTITY>* coObjects)
 
 void Koopa::Render()
 {
-	int ani = KOOPA_ANI_WALKING;
+	int ani = KOOPA_ANI_RED_WALKING;
 	if (state == KOOPA_STATE_DIE) {
-		ani = KOOPA_ANI_DIE;
+		ani = KOOPA_ANI_RED_DIE;
 	}
 	else if (state == KOOPA_STATE_TROOPA_SPIN) {
-		ani = KOOPA_ANI_TROOPA_SPIN;
+		ani = KOOPA_ANI_RED_TROOPA_SPIN;
 	}
 	else if (state == KOOPA_STATE_DIE_FLY)
-		ani = KOOPA_ANI_DIE_FLY;
+		ani = KOOPA_ANI_RED_DIE_FLY;
+
+
+
 
 	if (state == KOOPA_STATE_WALKING)
 		animationSet->at(ani)->Render(nx, x, y);
