@@ -7,7 +7,6 @@
 
 #define MARIO_WALKING_SPEED		0.08f 
 #define	MARIO_VMAX				0.15f
-//#define MARIO_WALKING_ACC		0.00012f 
 #define MARIO_WALKING_ACC		0.00015f
 
 #define MARIO_JUMP_SPEED_Y		0.2f

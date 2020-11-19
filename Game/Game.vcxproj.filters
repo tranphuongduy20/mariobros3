@@ -115,6 +115,9 @@
     <ClCompile Include="RaccoonTail.cpp">
       <Filter>Header Files\Object\Player</Filter>
     </ClCompile>
+    <ClCompile Include="VenusNoFire.cpp">
+      <Filter>Header Files\Object\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h">
@@ -230,6 +233,9 @@
     </ClInclude>
     <ClInclude Include="RaccoonTail.h">
       <Filter>Header Files\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusNoFire.h">
+      <Filter>Header Files\Object\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

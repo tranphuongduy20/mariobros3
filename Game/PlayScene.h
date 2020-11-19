@@ -17,6 +17,7 @@
 #include "Goomba.h"
 #include "Mushroom.h"
 #include "Venus.h"
+#include "VenusNoFire.h"
 #include "Leaf.h"
 #include "Coin.h"
 #include "Gate.h"

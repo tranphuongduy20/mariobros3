@@ -9,6 +9,7 @@
 #define OBJECT_TYPE_MUSHROOM	5
 #define OBJECT_TYPE_LEAF		6
 #define	OBJECT_TYPE_VENUS_RED	7
+#define OBJECT_TYPE_VENUS_NO_FIRE 8
 #define OBJECT_TYPE_COIN		10
 #define OBJECT_TYPE_GOOMBA		11
 //#define OBJECT_TYPE_CENTIPEDE	10
@@ -724,7 +725,7 @@ void PlayScene::_ParseSection_OBJECTS(string line)
 	}
 	case OBJECT_TYPE_KOOPA:
 	{
-		obj = new Koopa(/*atof(tokens[4].c_str()), atof(tokens[5].c_str())*/);
+		obj = new Koopa();
 		obj->SetPosition(x, y);
 		LPANIMATION_SET ani_set = animation_sets->Get(ani_set_id);
 
@@ -735,7 +736,18 @@ void PlayScene::_ParseSection_OBJECTS(string line)
 	}
 	case OBJECT_TYPE_VENUS_RED:
 	{
-		obj = new Venus(/*atof(tokens[4].c_str()), atof(tokens[5].c_str())*/);
+		obj = new Venus();
+		obj->SetPosition(x, y);
+		LPANIMATION_SET ani_set = animation_sets->Get(ani_set_id);
+
+		obj->SetAnimationSet(ani_set);
+		listEnemies.push_back(obj);
+		DebugOut(L"[test] add venus !\n");
+		break;
+	}
+	case OBJECT_TYPE_VENUS_NO_FIRE:
+	{
+		obj = new VenusNoFire();
 		obj->SetPosition(x, y);
 		LPANIMATION_SET ani_set = animation_sets->Get(ani_set_id);
 

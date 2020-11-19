@@ -1,4 +1,4 @@
-#include "Venus.h"
+#include "VenusNoFire.h"
 #include "debug.h"
 
 
@@ -9,30 +9,18 @@
 //	this->x = x;
 //	this->y = y;
 //}
-void Venus::Render()
+void VenusNoFire::Render()
 {
 	animationSet->at(state)->Render(nx, x, y);
 
 	RenderBoundingBox();
 }
 
-void Venus::SetState(int state)
+void VenusNoFire::SetState(int state)
 {
 	Entity::SetState(state);
 	switch (state)
 	{
-		/*case GIANT_STATE_45:
-			break;
-		case GIANT_STATE_45_MORE:
-			break;	*/
-			//case GIANT_STATE_UP:
-			//	//state = GIANT_STATE_45_MORE;
-			//	vy = -0.125;
-			//	break;
-			//case GIANT_STATE_DOWN:
-			//	//state = GIANT_STATE_45;
-			//	vy = 0;
-			//	break;
 	case VENUS_STATE_SHOOT_45:
 		fight = false;
 		break;
@@ -51,7 +39,7 @@ void Venus::SetState(int state)
 }
 
 
-void Venus::GetBoundingBox(float& left, float& top, float& right, float& bottom)
+void VenusNoFire::GetBoundingBox(float& left, float& top, float& right, float& bottom)
 {
 
 	left = x;
@@ -60,7 +48,7 @@ void Venus::GetBoundingBox(float& left, float& top, float& right, float& bottom)
 	bottom = y + VENUS_BOX_HEIGHT;
 
 }
-void Venus::Update(DWORD dt, vector<LPGAMEENTITY>* coObjects)
+void VenusNoFire::Update(DWORD dt, vector<LPGAMEENTITY>* coObjects)
 {
 
 	Entity::Update(dt, coObjects);
@@ -70,7 +58,7 @@ void Venus::Update(DWORD dt, vector<LPGAMEENTITY>* coObjects)
 
 	//if (start_y == 0) start_y = y;
 	////y += dy;
-	if (y > 336 && y < 368)
+	if (y > 361 && y < 384)
 		vy += MARIO_GRAVITY / 3 * dt;
 	else vy = 0;
 
@@ -95,15 +83,16 @@ void Venus::Update(DWORD dt, vector<LPGAMEENTITY>* coObjects)
 		timewaittoshoot = GetTickCount64();
 	}
 
-	if (y >= 368)
+	if (y >= 384)
 	{
-		y = 368;
+		y = 384;
 
 	}
-	if (y <= 336)
+	if (y <= 361)
 	{
-		y = 336;
+		y = 361;
 	}
 }
+
 
 

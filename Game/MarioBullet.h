@@ -6,9 +6,10 @@
 #define BULLET_BBOX_WIDTH			8
 #define BULLET_BBOX_HEIGHT			9
 
-#define DISTANCE_TO_BANG			5
+
 #define BULLET_ANI_FIRE				0
 #define BULLET_ANI_BANG				1
+#define DISTANCE_TO_BANG			5
 
 #define BULLET_SPEED					0.15f
 #define BULLET_DEFLECT_SPEED_Y			0.13f
